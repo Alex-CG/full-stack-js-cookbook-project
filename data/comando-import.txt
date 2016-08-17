@@ -1,0 +1,1 @@
+mongoimport -d cookbook -c categories categories-import.json
