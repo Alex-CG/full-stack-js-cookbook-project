@@ -20,6 +20,7 @@ MongoClient.connect('mongodb://localhost:27017/cookbook', function(err, db) {
 		categoryDAO.getCategories(categories =>  res.json({ data: categories })
 	});
 
+    // Use the router routes
     app.use('/', router);
 
     // Start the server listening
