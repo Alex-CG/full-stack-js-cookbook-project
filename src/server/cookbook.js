@@ -1,17 +1,17 @@
-import listen from '../util/server.listen.jsx';
+"use strict";
 
-var express = require('express');
-var MongoClient = require('mongodb').MongoClient;
-var CategoryDAO = require('./category.jsx').CategoryDAO;
-var Grid = mongo.Grid;
+import express from 'express';
+import mongodb from 'mongodb';
+import {categoryDAO} from './category.js';
 
-app = express();
+let MongoClient = mongodb.MongoClient;
+let app = express();
 
 MongoClient.connect('mongodb://localhost:27017/cookbook', (err, db) => {
 
 	console.log("Successfully connected!");
 
-	var categoryDAO = new CategoryDAO(db);
+	categoryDAO.setDB(db);
 
 	var router = express.Router();
 
@@ -24,6 +24,10 @@ MongoClient.connect('mongodb://localhost:27017/cookbook', (err, db) => {
     app.use('/', router);
 
     // Start the server listening
-    listen(app);
+    let PORT = 4578;
+
+	app.listen(PORT, () => {
+		console.log('Cookbook listening on http://localhost:%s.', PORT);
+	});
 
 });

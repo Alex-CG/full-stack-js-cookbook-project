@@ -34,6 +34,37 @@ var config = [
 		node: {
         	fs: "empty"
    		}
+	},
+	{
+		name: 'server',
+		entry: [
+			src_dir+'/server/category.js',
+			src_dir+'/server/cookbook.js'
+		],
+		output: {
+			path: out_dir,
+			filename: 'server.js'
+		},
+		module:{
+			loaders: [{
+				test: /\.js$/,
+				include: src_dir,
+				exclude: [nodeModulesPath],
+				loader: 'babel-loader',
+	            query: {
+	                presets: ['es2015']
+	            }
+			}]
+		},
+		resolve: {
+			extensions: ['','.js']
+		},
+		node: {
+        	fs: "empty",
+        	net: "empty",
+        	tls: "empty",
+        	module: "empty"
+   		}
 	}
 ];
 

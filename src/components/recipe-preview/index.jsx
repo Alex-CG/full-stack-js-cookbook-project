@@ -13,7 +13,7 @@ class CookbookApp extends React.Component {
 	      	<h3>this.props.category</h3>
 	      	<h2>this.props.cheff</h2>
 	      	<div>
-	      		<button>Ver<button>
+	      		<button>Ver</button>
 	      	</div>
 	      </div>
       )

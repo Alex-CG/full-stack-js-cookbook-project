@@ -7,7 +7,7 @@ class CookbookApp extends React.Component {
   }
 
   render() {
-      return <p className="text-center">Hello Cookbook APP</p>
+      return <h1 className="text-center">Hello Cookbook APP</h1>
   }
 
 }
