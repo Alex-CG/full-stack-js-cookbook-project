@@ -8,56 +8,33 @@ var out_dir = path.resolve(__dirname, 'build');
 var config = [
 	{
 		name: 'client',
-		entry: './src',
+		entry: [
+			src_dir+'/index.jsx',
+			src_dir+'/components/cookbookapp/index.jsx',
+			src_dir+'/components/recipe-preview/index.jsx'
+		],
 		output: {
 			path: out_dir,
 			filename: 'app.js'
 		},
 		module:{
 			loaders: [{
+				test: /\.jsx$/,
 				include: src_dir,
 				exclude: [nodeModulesPath],
-				loader: 'babel',
+				loader: 'babel-loader',
 	            query: {
 	                presets: ['es2015']
 	            }
 			}]
 		},
 		resolve: {
-			extensions: ['.json','.jsx']
-		},
-		node: {
-        	fs: "empty"
-   		}
-	},
-	{
-		name: 'server',
-		entry: [
-			'./src/server',
-			'./src/util'
-		],
-		output: {
-			path: out_dir,
-			filename: 'server.js'
-		},
-		module:{
-			loaders: [{
-				include: src_dir,
-				exclude: [nodeModulesPath],
-				loader: 'babel',
-	            query: {
-	                presets: ['es2015']
-	            }
-			}]
-		},
-		resolve: {
-			extensions: ['.json','.jsx']
+			extensions: ['','.js','.jsx']
 		},
 		node: {
         	fs: "empty"
    		}
 	}
-
 ];
 
 module.exports = config;
