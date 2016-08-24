@@ -9,7 +9,7 @@ class CategoryDAO {
 	getCategories(callback) {
         let query = {};
 
-		let cursor = this.db.collection('category').find(query);
+		let cursor = this.db.collection('categories').find(query);
 
         cursor.toArray((err, categories) => {
             callback(categories);

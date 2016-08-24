@@ -11,14 +11,11 @@ let app = express();
 MongoClient.connect('mongodb://localhost:27017/cookbook', (err, db) => {
 
 	console.log("Successfully connected!");
-
 	console.log(db);
-
-	console.log("Successfully connected!");
 
 	categoryDAO.setDB(db);
 
-	var router = express.Router();
+	let router = express.Router();
 
 	router.get("/categories", (req, res, next) => 
 		categoryDAO.getCategories(categories =>  res.json({ categories: categories }))
