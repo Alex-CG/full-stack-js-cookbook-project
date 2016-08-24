@@ -1,6 +1,7 @@
 "use strict";
 
 import express from 'express';
+import cors from 'cors';
 import mongodb from 'mongodb';
 import {categoryDAO} from './category.js';
 
@@ -11,14 +12,19 @@ MongoClient.connect('mongodb://localhost:27017/cookbook', (err, db) => {
 
 	console.log("Successfully connected!");
 
+	console.log(db);
+
+	console.log("Successfully connected!");
+
 	categoryDAO.setDB(db);
 
 	var router = express.Router();
 
-	router.get("/categories", (req, res) => 
-		categoryDAO.getCategories(categories =>  res.json({ data: categories }))
+	router.get("/categories", (req, res, next) => 
+		categoryDAO.getCategories(categories =>  res.json({ categories: categories }))
 	);
 
+	app.use(cors());
 
     // Use the router routes
     app.use('/', router);
