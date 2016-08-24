@@ -1,4 +1,5 @@
 import React from 'react'
+import MenuItems from '../menu-items/index.jsx'
 
 class Menu extends React.Component {
 
@@ -7,7 +8,10 @@ class Menu extends React.Component {
   }
 
   render() {
-      return <ul className="text-center">Hello Cookbook APP</ul>
+      return 
+        <div id="navbar" class="navbar-collapse collapse">
+            <MenuItems></MenuItems>
+        </div>
   }
 
 }

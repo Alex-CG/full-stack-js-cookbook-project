@@ -1,4 +1,5 @@
 import React from 'react'
+import Navigation from '../navigation/index.jsx'
 
 class CookbookApp extends React.Component {
 
@@ -19,7 +20,7 @@ class CookbookApp extends React.Component {
 
   render() {
       if(this.state.categories.length>0){
-        return <h1 className="text-center">Hello Cookbook APP</h1>
+        return <Navigation></Navigation>
       }else{
         return <p className="text-center">Cargando categorias...</p>
       }

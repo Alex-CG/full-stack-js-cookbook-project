@@ -7,7 +7,8 @@ class MenuItem extends React.Component {
   }
 
   render() {
-      return <ul className="text-center">Hello Cookbook APP</ul>
+      return
+		<li><a href="">Item</a></li>
   }
 
 }
