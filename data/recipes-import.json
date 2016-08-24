@@ -1,0 +1,32 @@
+{
+	_id: 1,
+	name: "Lomo Saltado",
+	nationality: "Peruvian",
+	category: "Meat",
+	chef: "Alex Contreras",
+	level-diff: "Intermediate",	
+
+	preparation: {
+		total-time: 25min,	
+		ingredients: [
+			{ num: 1, name: "name ing 1", amount: "1K"}, 
+			{ num: 2, name: "name ing 2", amount: "500G"}, 
+			{ num: 3, name: "name ing 3", amount: "1"}
+		],
+		description: "...",
+
+	},
+	social: {
+		likes: 5,
+		avg-rank: 2,
+		comments: [
+			{ num: 1, user:"", email:"", comment:"", rank:1 },
+			{ num: 1, user:"", email:"", comment:"", rank:1 },
+			{ num: 1, user:"", email:"", comment:"", rank:1 },
+			{ num: 1, user:"", email:"", comment:"", rank:1 },
+			{ num: 1, user:"", email:"", comment:"", rank:1 }
+		]
+	}
+	image: "...",
+	image-preview:"..."
+}

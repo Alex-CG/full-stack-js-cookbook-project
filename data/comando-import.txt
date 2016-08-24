@@ -1,1 +1,2 @@
 mongoimport -d cookbook -c categories categories-import.json
+mongoimport -d cookbook -c recipes recipes-import.json
