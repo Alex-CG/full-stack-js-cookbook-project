@@ -1,4 +1,4 @@
-1. Usar "const" en su mayoria y solo "let" cuando sea una varible (revisar toda la app)
+(OK) 1. Usar "const" en su mayoria y solo "let" cuando sea una varible (revisar toda la app)
 2. Usar un archivo js para configurar en routing. (Separar responsabilidad).
 3. Crear archivo de constantes
 4. En cookbook.js cambiar la forma de conexion a la bd, debe ser transparente. (Separar responsabilidades)

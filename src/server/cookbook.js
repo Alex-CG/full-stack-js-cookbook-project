@@ -1,9 +1,10 @@
 "use strict";
 
-import express from 'express';
-import cors from 'cors';
-import mongodb from 'mongodb';
-import {categoryDAO} from './category.js';
+import express from 'express'
+import cors from 'cors'
+import mongodb from 'mongodb'
+import {categoryDAO} from './category.js'
+import {listen} from '../util/server.listen.js'
 
 const MongoClient = mongodb.MongoClient;
 const app = express();
@@ -27,10 +28,6 @@ MongoClient.connect('mongodb://localhost:27017/cookbook', (err, db) => {
     app.use('/', router);
 
     // Start the server listening
-    const PORT = 4578;
-
-	app.listen(PORT, () => {
-		console.log('Cookbook listening on http://localhost:%s.', PORT);
-	});
+	listen(app);
 
 });

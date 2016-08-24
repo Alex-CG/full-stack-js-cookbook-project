@@ -1,6 +1,6 @@
-export default function(app){
+export function listen(app){
 
-	let PORT = 4578;
+	const PORT = 4578;
 
 	app.listen(PORT, () => {
 		console.log('Cookbook listening on http://localhost:%s.', PORT);

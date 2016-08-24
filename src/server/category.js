@@ -7,9 +7,9 @@ class CategoryDAO {
 	}
 
 	getCategories(callback) {
-        let query = {};
+        const query = {};
 
-		let cursor = this.db.collection('categories').find(query);
+		const cursor = this.db.collection('categories').find(query);
 
         cursor.toArray((err, categories) => {
             callback(categories);
@@ -19,4 +19,4 @@ class CategoryDAO {
 
 }
 
-export let categoryDAO = new CategoryDAO();
+export const categoryDAO = new CategoryDAO();
