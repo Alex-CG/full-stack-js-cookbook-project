@@ -4,29 +4,197 @@
 	nationality: "Peruvian",
 	category: "Meat",
 	chef: "Alex Contreras",
-	level-diff: "Intermediate",	
+	level: "Intermediate",	
 
 	preparation: {
-		total-time: 25min,	
+		total_time: 45,	
 		ingredients: [
-			{ num: 1, name: "name ing 1", amount: "1K"}, 
-			{ num: 2, name: "name ing 2", amount: "500G"}, 
-			{ num: 3, name: "name ing 3", amount: "1"}
+			{ num: 1, name: "Potatoes", amount: "1 1/2", unit: "lbs" }, 
+			{ num: 2, name: "Vegetable oil", amount: "2", unit: "tablespoons" }, 
+			{ num: 3, name: "Garlic cloves", amount: "2", unit: "" },
+			{ num: 4, name: "Ground cumin", amount: "1/2", unit: "teaspoon" },
+			{ num: 5, name: "Beef tenderloin", amount: "1", unit: "lb" },
+			{ num: 6, name: "Red onions, sliced thinly into slivers", amount: "2", unit: "" },
+			{ num: 7, name: "Hot yellow pepper, diced", amount: "1", unit: "" },
+			{ num: 8, name: "Soy sauce", amount: "3", unit: "tablespoons" },
+			{ num: 9, name: "Vinegar", amount: "2", unit: "tablespoons" },
+			{ num: 10, name: "Salt and pepper", amount: "", unit: "" }
 		],
-		description: "...",
-
+		description: "Peel and cut potatoes into 1/2 inch thick french fries, and place in ice water. Cut beef into thin 1/2 inch strips. Mash garlic cloves. Heat vegetable oil in a skillet and saute garlic with the cumin for 1 minute. Add beef and cook on medium high heat until browned on all sides. Remove beef from heat and season with salt and pepper. Set aside. Add the onions and hot yellow pepper to the same pan and cook 2 to 3 minutes, until the onions are soft, adding a little more vegetable oil if needed. Add the vinegar, soy sauce, and red peppers and cook 2 to 3 more minutes. Remove from heat. In a separate pan, fry the potatoes in 1 to 2 inches of oil until golden. Drain on paper towels and season with salt and pepper to taste. Add the beef to the pan with the onions and peppers. Add the tomatoes and heat for 2 minutes. Add the french fries to the stir-fry. Serve with rice."		
 	},
 	social: {
-		likes: 5,
-		avg-rank: 2,
-		comments: [
-			{ num: 1, user:"", email:"", comment:"", rank:1 },
-			{ num: 1, user:"", email:"", comment:"", rank:1 },
-			{ num: 1, user:"", email:"", comment:"", rank:1 },
-			{ num: 1, user:"", email:"", comment:"", rank:1 },
-			{ num: 1, user:"", email:"", comment:"", rank:1 }
-		]
-	}
-	image: "...",
-	image-preview:"..."
+		likes: 0,
+		avg_rank: 0,
+		comments: []
+	},
+	image: ""
+}
+{
+	_id: 2,
+	name: "Tomato Salad",
+	nationality: "Peruvian",
+	category: "Salads",
+	chef: "Johan Contreras",
+	level: "Easy",	
+
+	preparation: {
+		total_time: 15,	
+		ingredients: [
+			{ num: 1, name: "Medium tomatoes, sliced in wedges.", amount: "5", unit: "" }, 
+			{ num: 2, name: "Sliced onion", amount: "1⁄3" , unit: "cup" }, 
+			{ num: 3, name: "Olive oil", amount: "1 - 2" , unit: "tablespoon" },
+			{ num: 4, name: "Leaves fresh basil, shredded", amount: "2" , unit: "" }
+		],
+		description: "Combine all ingredients and chill salad an hour before serving for best taste."		
+	},
+	social: {
+		likes: 0,
+		avg_rank: 0,
+		comments: []
+	},
+	image: ""
+}
+{
+	_id: 3,
+	name: "Cake Batter Ice Cream",
+	nationality: "American",
+	category: "Desserts",
+	chef: "Alex Contreras",
+	level: "Intermediate",	
+
+	preparation: {
+		total_time: 30,	
+		ingredients: [
+			{ num: 1, name: "Milk, well chilled", amount: "1" , unit: "cup" }, 
+			{ num: 2, name: "Granulated sugar", amount: "3⁄4" , unit: "cup" }, 
+			{ num: 3, name: "Heavy cream, well chilled", amount: "2" , unit: "cups" },
+			{ num: 4, name: "Pure vanilla extract", amount: "1" , unit: "teaspoon" },
+			{ num: 5, name: "Cake mix", amount: "2⁄3" , unit: "cup" }
+		],
+		description: "Place freezer bowl of ice cream maker into the freezer. It is better to keep it in there 24/7 that way it is always ready. In a medium bowl, whisk the milk and granulated sugar until the sugar is dissolved. Stir in the heavy cream and vanilla to taste. Stir in cake mix, making sure there are no lumps. Pour mixture into the freezer bowl and let mix until it has thickened (about 25-30 minutes). Remove ice cream from freezer bowl and place into a separate container. Place freezer bowl and the ice cream into the freezer to further harden."
+	},
+	social: {
+		likes: 0,
+		avg_rank: 0,
+		comments: []
+	},
+	image: ""
+}
+{
+	_id: 4,
+	name: "Vegetable Lasagna Roll-Ups",
+	nationality: "Italian",
+	category: "Pastas",
+	chef: "Alex Contreras",
+	level: "Hard",	
+
+	preparation: {
+		total_time: 60,	
+		ingredients: [
+			{ num: 1, name: "Lasagna noodles", amount: "1" , unit: "box" }, 
+			{ num: 2, name: "Frozen chopped spinach", amount: "10" , unit: "ounces" }, 
+			{ num: 3, name: "Frozen chopped broccoli", amount: "10" , unit: "ounces" },
+			{ num: 4, name: "Mushroom stems and pieces", amount: "8" , unit: "ounces" },
+			{ num: 5, name: "Egg yolks", amount: "3" , unit: "" },
+			{ num: 6, name: "Part-skim ricotta cheese", amount: "32" , unit: "ounces" },
+			{ num: 7, name: "Mozzarella cheese, shredded", amount: "2" , unit: "cups" },
+			{ num: 8, name: "Cans tomato sauce", amount: "14 1/2" , unit: "ounces" },
+			{ num: 9, name: "Parmesan cheese", amount: "1/4" , unit: "cup" }
+		],
+		description: "Cook noodles. Drain and lay flat. Thaw spinach and broccoli. Squeeze completely dry. Drain mushrooms. Empty Ricotta cheese into deep bowl, add three egg yolks, a handful of Parmesan cheese, a dash of nutmeg and parsley. Mix with spoon. Add mozzarella, spinach, broccoli and mushrooms. Mix well. Spread some sauce onto bottom of lasagna pan. Use rubber spatula to spread Ricotta mixture onto length of lasagna noodles and roll tightly. Put roll ups into lasagna pan, seam down. Fit roll ups snuggly. Add sauce to top of roll ups. Add grated cheese."
+	},
+	social: {
+		likes: 0,
+		avg_rank: 0,
+		comments: []
+	},
+	image: ""
+}
+{
+	_id: 5,
+	name: "Gyro Meat",
+	nationality: "Argentinian",
+	category: "Meat",
+	chef: "Alex Contreras",
+	level: "Intermediate",	
+
+	preparation: {
+		total_time: 20,	
+		ingredients: [
+			{ num: 1, name: "Lean ground lamb", amount: "1" , unit: "lb" }, 
+			{ num: 2, name: "Cloves garlic (crushed)", amount: "2" , unit: "" }, 
+			{ num: 3, name: "Dried oregano ", amount: "1 1/2" , unit: "teaspoons" },
+			{ num: 4, name: "Onion powder", amount: "1" , unit: "teaspoon" },
+			{ num: 5, name: "Salt", amount: "1" , unit: "teaspoon" },
+			{ num: 6, name: "Pepper", amount: "3/4" , unit: "teaspoon" }
+		],
+		description: "Combine ingredients in a bowl, and shape into 1/2 inch thick patties. Broil 8-10 minutes until no longer pink. Slice thinly and serve with pita bread, sliced tomatoes, thinly sliced onion, cucumber yogurt sauce."		
+	},
+	social: {
+		likes: 0,
+		avg_rank: 0,
+		comments: []
+	},
+	image: ""
+}
+{
+	_id: 6,
+	name: "Turkey Meatloaf",
+	nationality: "Turkish",
+	category: "Meat",
+	chef: "Alex Contreras",
+	level: "Intermediate",	
+
+	preparation: {
+		total_time: 65,	
+		ingredients: [
+			{ num: 1, name: "Butter (or margarine)", amount: "2" , unit: "tablespoons" }, 
+			{ num: 2, name: "Onion, chopped", amount: "1" , unit: "cup" }, 
+			{ num: 3, name: "Cloves garlic, minced", amount: "3" , unit: "" },
+			{ num: 4, name: "Ground turkey", amount: "1/4" , unit: "lbs" },
+			{ num: 5, name: "Breadcrumbs", amount: "1" , unit: "cup" },
+			{ num: 6, name: "Egg", amount: "1" , unit: "" },
+			{ num: 7, name: "Catsup", amount: "1/2" , unit: "cup" },
+			{ num: 8, name: "Worcestershire sauce", amount: "2" , unit: "teaspoons" },
+			{ num: 9, name: "Salt", amount: "3/4" , unit: "teaspoon" },
+			{ num: 10, name: "Black pepper", amount: "1/4" , unit: "teaspoon" }
+		],
+		description: "Melt butter in a skillet. Cook onion and garlic in melted butter for 5 minutes, stirring occasionally. Place mixture in a large bowl to cool for 5 minutes. Combine turkey, bread crumbs, egg, 1/4 cup of the catsup, Worcestershire sauce, salt, and pepper with onion mixture. Press meatloaf into an 8x4-inch loaf pan. Spread remaining catsup on top"		
+	},
+	social: {
+		likes: 0,
+		avg_rank: 0,
+		comments: []
+	},
+	image: ""
+}
+{
+	_id: 7,
+	name: "Turkey Breakfast Sausage Patties",
+	nationality: "Turkish",
+	category: "Meat",
+	chef: "Alex Contreras",
+	level: "Intermediate",	
+
+	preparation: {
+		total_time: 15,	
+		ingredients: [
+			{ num: 1, name: "Ground turkey", amount: "1" , unit: "lib" }, 
+			{ num: 2, name: "Salt", amount: "1" , unit: "teaspoon" }, 
+			{ num: 3, name: "Sage", amount: "2" , unit: "teaspoons" },
+			{ num: 4, name: "Fennel seed", amount: "1" , unit: "teaspoon" },
+			{ num: 5, name: "Thyme", amount: "1" , unit: "teaspoon" },
+			{ num: 6, name: "Black pepper", amount: "1" , unit: "teaspoon" },
+			{ num: 7, name: "White pepper", amount: "1" , unit: "teaspoon" },
+			{ num: 8, name: "Cayenne", amount: "1/2" , unit: "teaspoon" },
+			{ num: 9, name: "Nutmeg", amount: "1" , unit: "teaspoon" }
+		],
+		description: "Combine all ingredients (use less pepper if you don't want a spicy taste) and blend well. If time permits, refrigerate overnight to let the meat absorb the flavor of the spices. Form into patties and cook as needed, freezing leftovers. Don't overcook or they will dry out--remove from the heat as soon as they're no longer pink inside, but still juicy. (if you prefer a moister texture, you add a splash of olive oil or an egg to the mixture just prior to cooking)."		
+	},
+	social: {
+		likes: 0,
+		avg_rank: 0,
+		comments: []
+	},
+	image: ""
 }
