@@ -11,10 +11,11 @@ var config = [
 		entry: [
 			src_dir+'/index.jsx',
 			src_dir+'/components/cookbookapp/index.jsx',
-			src_dir+'/components/navigation/index.jsx',
-			src_dir+'/components/menu-items/index.jsx',
 			src_dir+'/components/menu-item/index.jsx',
-			src_dir+'/components/recipe-preview/index.jsx'
+			src_dir+'/components/menu-items/index.jsx',
+			src_dir+'/components/navigation/index.jsx',
+			src_dir+'/components/recipe-item/index.jsx',
+			src_dir+'/components/recipes-board/index.jsx'
 		],
 		output: {
 			path: out_dir,

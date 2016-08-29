@@ -4,6 +4,7 @@ import express from 'express'
 import cors from 'cors'
 import mongodb from 'mongodb'
 import {categoryDAO} from './category.js'
+import {recipeDAO} from './recipe.js'
 import {listen} from '../util/server.listen.js'
 
 const MongoClient = mongodb.MongoClient;
@@ -15,11 +16,16 @@ MongoClient.connect('mongodb://localhost:27017/cookbook', (err, db) => {
 	console.log(db);
 
 	categoryDAO.setDB(db);
+	recipeDAO.setDB(db);
 
 	const router = express.Router();
 
 	router.get("/categories", (req, res, next) => 
 		categoryDAO.getCategories(categories =>  res.json({ categories: categories }))
+	);
+
+	router.get("/recipesboard", (req, res, next) => 
+		recipeDAO.getRecipes(recipes =>  res.json({ recipes: recipes }))
 	);
 
 	app.use(cors());
