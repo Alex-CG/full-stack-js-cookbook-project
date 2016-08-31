@@ -1,3 +1,21 @@
 .sep-recipe {
 	padding-bottom: 3em;
 }
+
+.navbar-nav {
+	margin: 10px 0px;
+}
+
+.nav li {
+	margin: 5px 10px;
+}
+
+.nav li a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.nav li .active{
+	background-color: red;
+	border-radius: 5px;
+}

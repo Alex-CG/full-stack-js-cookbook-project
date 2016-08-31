@@ -1,4 +1,4 @@
-{_id:1, name: "Pastas"}
-{_id:2, name: "Salads"}
-{_id:3, name: "Meat"}
-{_id:4, name: "Desserts"}
+{"_id":1, "name": "Pastas"}
+{"_id":2, "name": "Salads"}
+{"_id":3, "name": "Meat"}
+{"_id":4, "name": "Desserts"}

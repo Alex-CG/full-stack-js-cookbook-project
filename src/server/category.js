@@ -12,6 +12,7 @@ class CategoryDAO {
 		const cursor = this.db.collection('categories').find(query);
 
         cursor.toArray((err, categories) => {
+        	categories.unshift({ _id: 0, name: 'All'});
             callback(categories);
         });
 

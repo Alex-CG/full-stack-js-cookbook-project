@@ -4,7 +4,7 @@ class RecipeItem extends React.Component {
 
   render() {
       return (
-	      <div className="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+	      <div className="col-xs-12 col-sm-6 col-md-4">
 	      	<div className="media">
 
 	      		<div className="media-body sep-recipe">

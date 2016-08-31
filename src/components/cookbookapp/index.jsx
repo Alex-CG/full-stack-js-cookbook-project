@@ -7,26 +7,37 @@ class CookbookApp extends React.Component {
 
   constructor(props) {
     super(props)
+    this.getRecipes = this.getRecipes.bind(this)
     this.state = { categories: [], recipes: [] }
   }
 
   componentWillMount() {
+
+    this.getCategories();
+    this.getRecipes('');
+
+  }
+
+  getCategories() {
     fetch('http://localhost:4578/categories')
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        this.setState({ categories: data.categories })
-      })
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      this.setState({ categories: data.categories })
+    });
+  }
 
-    fetch('http://localhost:4578/recipesboard')
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        this.setState({ recipes: data.recipes })
-      })
-
+  getRecipes(category) {
+    const cat = category ? '/'+category : '';
+    console.log(cat);
+    fetch('http://localhost:4578/recipesboard' + cat)
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      this.setState({ recipes: data.recipes })
+    });
   }
 
   render() {  
@@ -39,13 +50,13 @@ class CookbookApp extends React.Component {
               <Navigation></Navigation>
 
               <div id="navbar" className="navbar-collapse collapse">
-                  <MenuItems categories={this.state.categories}></MenuItems>
+                  <MenuItems categories={this.state.categories} getRecipes={this.getRecipes} />
               </div>
      
             </div>
           </nav>
           <br /><br /><br /><br />
-          <RecipesBoard recipes={this.state.recipes} ></RecipesBoard>
+          <RecipesBoard recipes={this.state.recipes} />
 
       </div>
 
