@@ -24,8 +24,10 @@ MongoClient.connect('mongodb://localhost:27017/cookbook', (err, db) => {
 		categoryDAO.getCategories(categories =>  res.json({ categories: categories }))
 	);
 
-	router.get("/recipesboard", (req, res, next) => 
-		recipeDAO.getRecipes(recipes =>  res.json({ recipes: recipes }))
+	router.get("/recipesboard/:cat", (req, res, next) => {
+			const category = req.params.cat;
+			recipeDAO.getRecipes(category, (recipes) =>  res.json({ recipes: recipes }));
+		}
 	);
 
 	app.use(cors());

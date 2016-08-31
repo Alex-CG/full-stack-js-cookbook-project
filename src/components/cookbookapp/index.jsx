@@ -29,9 +29,8 @@ class CookbookApp extends React.Component {
   }
 
   getRecipes(category) {
-    const cat = category ? '/'+category : '';
-    console.log(cat);
-    fetch('http://localhost:4578/recipesboard' + cat)
+    const cat = category ? category : 'All';
+    fetch('http://localhost:4578/recipesboard/' + cat)
     .then(response => {
       return response.json()
     })
@@ -44,7 +43,7 @@ class CookbookApp extends React.Component {
     return (
 
       <div>
-          <nav className="navbar navbar-inverse navbar-fixed-top">
+          <nav className="navbar navbar-inverse">
             <div className="container">
 
               <Navigation></Navigation>
@@ -55,7 +54,7 @@ class CookbookApp extends React.Component {
      
             </div>
           </nav>
-          <br /><br /><br /><br />
+          <br />
           <RecipesBoard recipes={this.state.recipes} />
 
       </div>

@@ -6,8 +6,15 @@ class RecipeDAO {
 		this.db = database;	
 	}
 
-	getRecipes(callback) {
-        const query = {};
+	getRecipes(cat, callback) {
+        let query = {};
+
+        console.log(cat);
+
+        if(cat && cat!='All') {
+        	query = { category: cat };
+        }
+
         const proj = { name:1, category:1, chef:1 };
 
 		const cursor = this.db.collection('recipes').find(query, proj);

@@ -8,8 +8,9 @@ class MenuItem extends React.Component {
   }
 
   onClickRecipe(e) {
+  	console.log(e.target.text);
   	e.preventDefault();
-  	this.props.getRecipes(e.target.value);
+  	this.props.getRecipes(e.target.text);
   }
 
   render() {
