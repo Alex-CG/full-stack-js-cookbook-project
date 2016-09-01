@@ -2,6 +2,16 @@ import React from 'react'
 
 class RecipeItem extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.onClickShowPreview = this.onClickShowPreview.bind(this);
+  }
+
+  onClickShowPreview(e){
+  	e.preventDefault();
+  	this.props.showPreview();
+  }
+
   render() {
       return (
 	      <div className="col-xs-12 col-sm-6 col-md-4">
@@ -12,7 +22,7 @@ class RecipeItem extends React.Component {
 			      	<h6>{this.props.category}</h6>
 			      	<h5>{this.props.chef}</h5>
 			      	<div>
-			      		<button className="btn btn-info btn-xs">Ver</button>
+			      		<button className="btn btn-info btn-xs" onClick={this.onClickShowPreview}>Ver</button>
 			      	</div>
 	      		</div>
 

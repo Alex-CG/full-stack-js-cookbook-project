@@ -14,7 +14,9 @@ var config = [
 			src_dir+'/components/menu-item/index.jsx',
 			src_dir+'/components/menu-items/index.jsx',
 			src_dir+'/components/navigation/index.jsx',
+			src_dir+'/components/recipe-form/index.jsx',
 			src_dir+'/components/recipe-item/index.jsx',
+			src_dir+'/components/recipe-preview/index.jsx',
 			src_dir+'/components/recipes-board/index.jsx'
 		],
 		output: {
