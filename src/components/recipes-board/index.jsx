@@ -6,29 +6,30 @@ class RecipesBoard extends React.Component {
 
   constructor(props) {
     super(props)
-    this.handleShowModalPreview = this.handleShowModalPreview.bind(this)
-    this.state = { modalRecipe: false }
+    this.handleShowPreview = this.handleShowPreview.bind(this)
+    this.handleHidePreview = this.handleHidePreview.bind(this)
+    this.state = { viewRecipe: false }
   }
 
-  handleHideModalPreview(){
-  	this.setState({ modalRecipe: false })
+  handleHidePreview(){
+  	this.setState({ viewRecipe: false });
   }
 
-  handleShowModalPreview(){
-  	this.setState({ modalRecipe: true })
+  handleShowPreview(){
+  	this.setState({ viewRecipe: true });
   }
-
 
   render() {
       return (
       	<div className="container">
 	      	<div className="row">
 	      		{
-	      			this.props.recipes.map((recipe)=>{
-	      				return <RecipeItem key={recipe._id} title={recipe.name} category={recipe.category} chef={recipe.chef} showPreview={this.handleShowModalPreview}></RecipeItem>
-	      			})
+	      			this.props.recipes.map((recipe) => {
+	      				return <RecipeItem key={recipe._id} title={recipe.name} category={recipe.category} chef={recipe.chef} showPreview={this.handleShowPreview}></RecipeItem>
+                }
+	      			)
 	      		}
-            {this.state.modalRecipe ? <RecipePreview hidePreview={this.handleHideModalPreview}/> : null}
+            {this.state.viewRecipe ? <RecipePreview show={this.state.viewRecipe} hidePreview={this.handleHidePreview}/> : ''}
 	      	</div>
 	    </div>
       )

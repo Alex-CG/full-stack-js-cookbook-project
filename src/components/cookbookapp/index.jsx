@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from '../navigation/index.jsx'
 import MenuItems from '../menu-items/index.jsx'
 import RecipesBoard from '../recipes-board/index.jsx'
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
 
 class CookbookApp extends React.Component {
 
@@ -12,10 +13,8 @@ class CookbookApp extends React.Component {
   }
 
   componentWillMount() {
-
     this.getCategories();
     this.getRecipes('');
-
   }
 
   getCategories() {

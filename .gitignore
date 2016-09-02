@@ -2,3 +2,8 @@
 /build/app.js
 /build/server.js
 /vistas
+/build/*.svg
+/build/*.woff2
+/build/*.ttf
+/build/*.eot
+/build/*.woff

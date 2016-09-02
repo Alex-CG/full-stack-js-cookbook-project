@@ -12,13 +12,13 @@ class RecipeForm extends React.Component {
             <fieldset>
               <legend>New Recipe</legend>
               <div className="form-group">
-                <label htmlFor"inputName" className="col-lg-2 control-label">Name</label>
+                <label htmlFor="inputName" className="col-lg-2 control-label">Name</label>
                 <div className="col-lg-10">
                   <input type="text" className="form-control" id="inputName" placeholder="Name" />
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor"select" className="col-lg-2 control-label">Category</label>
+                <label htmlFor="select" className="col-lg-2 control-label">Category</label>
                 <div className="col-lg-10">
                   <select className="form-control" id="select">
                     <option>1</option>
@@ -30,7 +30,7 @@ class RecipeForm extends React.Component {
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor"inputNationality" className="col-lg-2 control-label">Nationality</label>
+                <label htmlFor="inputNationality" className="col-lg-2 control-label">Nationality</label>
                 <div className="col-lg-10">
                   <input type="text" className="form-control" id="inputNationality" placeholder="Nationality" />
                 </div>
@@ -50,13 +50,13 @@ class RecipeForm extends React.Component {
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor"inputTime" className="col-lg-2 control-label">Preparation time (in minutes)</label>
+                <label htmlFor="inputTime" className="col-lg-2 control-label">Preparation time (in minutes)</label>
                 <div className="col-lg-10">
                   <input type="number" className="form-control" id="inputTime" placeholder="Preparation time (in minutes)" />
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor"textArea" className="col-lg-2 control-label">Description</label>
+                <label htmlFor="textArea" className="col-lg-2 control-label">Description</label>
                 <div className="col-lg-10">
                   <textarea className="form-control" rows="3" id="textArea"></textarea>
                 </div>
