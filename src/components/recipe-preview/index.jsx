@@ -21,10 +21,10 @@ class RecipePreview extends React.Component {
     return (
         <Modal show={this.props.show} onHide={this.onClickHidePreview} >
           <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-lg">Modal heading</Modal.Title>
+            <Modal.Title id="contained-modal-title-lg">{this.props.recipe.name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Wrapped Text</h4>
+            <h4>Description</h4>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.onClickHidePreview}>Close</Button>

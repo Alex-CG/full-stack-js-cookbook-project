@@ -8,15 +8,15 @@ class RecipesBoard extends React.Component {
     super(props)
     this.handleShowPreview = this.handleShowPreview.bind(this)
     this.handleHidePreview = this.handleHidePreview.bind(this)
-    this.state = { viewRecipe: false }
+    this.state = { viewRecipe: false, idRecipePreview: 0}
   }
 
   handleHidePreview(){
   	this.setState({ viewRecipe: false });
   }
 
-  handleShowPreview(){
-  	this.setState({ viewRecipe: true });
+  handleShowPreview(id){
+  	this.setState({ viewRecipe: true, idRecipePreview: id });
   }
 
   render() {
@@ -25,11 +25,11 @@ class RecipesBoard extends React.Component {
 	      	<div className="row">
 	      		{
 	      			this.props.recipes.map((recipe) => {
-	      				return <RecipeItem key={recipe._id} title={recipe.name} category={recipe.category} chef={recipe.chef} showPreview={this.handleShowPreview}></RecipeItem>
+	      				return <RecipeItem key={recipe._id} id={recipe._id} title={recipe.name} category={recipe.category} chef={recipe.chef} showPreview={this.handleShowPreview}></RecipeItem>
                 }
 	      			)
 	      		}
-            {this.state.viewRecipe ? <RecipePreview show={this.state.viewRecipe} hidePreview={this.handleHidePreview}/> : ''}
+            {this.state.viewRecipe ? <RecipePreview show={this.state.viewRecipe} recipe={this.props.recipes[this.state.idRecipePreview-1]} hidePreview={this.handleHidePreview}/> : ''}
 	      	</div>
 	    </div>
       )

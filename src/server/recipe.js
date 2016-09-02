@@ -17,7 +17,7 @@ class RecipeDAO {
 
         const proj = { name:1, category:1, chef:1 };
 
-		const cursor = this.db.collection('recipes').find(query, proj);
+		const cursor = this.db.collection('recipes').find(query, proj).sort({_id:1});
 
         cursor.toArray((err, recipes) => {
             callback(recipes);
