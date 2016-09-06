@@ -19,6 +19,15 @@ class RecipesBoard extends React.Component {
   	this.setState({ viewRecipe: true, idRecipePreview: id });
   }
 
+  getRecipeSelected(){
+    const id = this.state.idRecipePreview;
+    for (var i = 0; i < this.props.recipes.length; i++) {
+      if(this.props.recipes[i]._id == id){
+        return this.props.recipes[i];
+      }
+    }
+  }
+
   render() {
       return (
       	<div className="container">
@@ -29,7 +38,7 @@ class RecipesBoard extends React.Component {
                 }
 	      			)
 	      		}
-            {this.state.viewRecipe ? <RecipePreview show={this.state.viewRecipe} recipe={this.props.recipes[this.state.idRecipePreview-1]} hidePreview={this.handleHidePreview}/> : ''}
+            {this.state.viewRecipe ? <RecipePreview show={this.state.viewRecipe} recipe={this.getRecipeSelected()} hidePreview={this.handleHidePreview}/> : ''}
 	      	</div>
 	    </div>
       )
