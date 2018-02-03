@@ -1,3 +1,5 @@
+import * as constants from './util/constants.js'
+
 class RecipeDAO {
 
 	constructor() { }
@@ -15,9 +17,9 @@ class RecipeDAO {
         	query = { category: cat };
         }
 
-        const proj = { name:1, category:1, chef:1 };
+        const proj = { name:1, nationality:1, category:1, chef:1, level:1, preparation:1 };
 
-		const cursor = this.db.collection('recipes').find(query, proj).sort({_id:1});
+		const cursor = this.db.collection(constants.COLL_RECIPES).find(query, proj).sort({_id:1});
 
         cursor.toArray((err, recipes) => {
             callback(recipes);

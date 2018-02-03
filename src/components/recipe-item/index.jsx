@@ -10,6 +10,7 @@ class RecipeItem extends React.Component {
   onClickShowPreview(e){
   	e.preventDefault();
   	const id = this.props.id;
+    console.log('recipe' + id);
   	this.props.showPreview(id);
   }
 
