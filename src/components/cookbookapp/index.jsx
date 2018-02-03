@@ -2,7 +2,9 @@ import React from 'react'
 import Navigation from '../navigation/index.jsx'
 import MenuItems from '../menu-items/index.jsx'
 import RecipesBoard from '../recipes-board/index.jsx'
-import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
+import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
+//import 'bootstrap/dist/css/bootstrap.css'
+//import 'bootstrap/dist/css/bootstrap-theme.css'
 
 class CookbookApp extends React.Component {
 
